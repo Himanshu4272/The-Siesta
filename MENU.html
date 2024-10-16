@@ -1,206 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon_io (4)/favicon.ico">
-    <title>Tasty and Delightful Menu</title>
+    <title>Himanshu Eats - Simple Menu</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-color);
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f0f0f0;
-            background-image: 
-                radial-gradient(circle at 100% 150%, #f0f0f0 24%, white 25%, white 28%, #f0f0f0 29%, #f0f0f0 36%, white 36%, white 40%, transparent 40%, transparent),
-                radial-gradient(circle at 0    150%, #f0f0f0 24%, white 25%, white 28%, #f0f0f0 29%, #f0f0f0 36%, white 36%, white 40%, transparent 40%, transparent),
-                radial-gradient(circle at 50%  100%, white 10%, #f0f0f0 11%, #f0f0f0 23%, white 24%, white 30%, #f0f0f0 31%, #f0f0f0 43%, white 44%, white 50%, #f0f0f0 51%, #f0f0f0 63%, white 64%, white 71%, transparent 71%, transparent),
-                radial-gradient(circle at 100% 50%, white 5%, #f0f0f0 6%, #f0f0f0 15%, white 16%, white 20%, #f0f0f0 21%, #f0f0f0 30%, white 31%, white 35%, #f0f0f0 36%, #f0f0f0 45%, white 46%, white 49%, transparent 50%, transparent),
-                radial-gradient(circle at 0    50%, white 5%, #f0f0f0 6%, #f0f0f0 15%, white 16%, white 20%, #f0f0f0 21%, #f0f0f0 30%, white 31%, white 35%, #f0f0f0 36%, #f0f0f0 45%, white 46%, white 49%, transparent 50%, transparent);
-            background-size: 100px 50px;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-
         }
-
         header {
-
-
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 30px;
         }
-
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            position: relative;
-            display: inline-block;
+            color: #333;
+            font-size: 2.5rem;
         }
-
-        h1::before, h1::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-color);
-            top: 50%;
-        }
-
-        h1::before {
-            left: -60px;
-        }
-
-        h1::after {
-            right: -60px;
-        }
-
         .subtitle {
+            color: #000000;
             font-size: 1.2rem;
-            color: var(--secondary-color);
-            font-weight: 300;
         }
-
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-
         .menu-item {
-            background-color: #ffffff;
-            border-radius: 20px;
+            background-color: #fff;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .menu-item:hover {
-            transform: translateY(-10px) rotate(2deg);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
         .menu-item img {
             width: 100%;
-            height: 220px;
+            height: 250px;
             object-fit: cover;
-            transition: transform 0.3s ease;
         }
-
-        .menu-item:hover img {
-            transform: scale(1.1);
-        }
-
-
-
-
         .menu-item-content {
-            padding: 1.5rem;
-            position: relative;
+            padding: 15px;
         }
-
         .menu-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #333;
         }
-
         .menu-item p {
-            font-size: 0.9rem;
-            color: var(--text-color);
-        }
-
-        .menu-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .menu-item:hover::before {
-            transform: scaleX(1);
-        }
-
-        .menu-item::after {
-            content: '🍽️';
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .menu-item:hover::after {
-            opacity: 1;
-            transform: rotate(30deg);
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .floating-icon {
-            position: absolute;
-            font-size: 2rem;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .floating-icon:nth-child(1) { top: 20px; left: 10%; }
-        .floating-icon:nth-child(2) { top: 60px; right: 15%; }
-        .floating-icon:nth-child(3) { bottom: 40px; left: 20%; }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .menu-grid {
-                gap: 1.5rem;
-            }
-
-            .floating-icon {
-                display: none;
-            }
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
+            color: #666;
+            font-size: 14px;
+            margin: 0;
         }
     </style>
 </head>
@@ -209,9 +64,6 @@
         <header>
             <h1>Himanshu Eats</h1>
             <p class="subtitle">A Feast for the Senses</p>
-            <div class="floating-icon" aria-hidden="true">🍕</div>
-            <div class="floating-icon" aria-hidden="true">🍰</div>
-            <div class="floating-icon" aria-hidden="true">🍜</div>
         </header>
         <main>
             <div class="menu-grid">
@@ -341,7 +193,7 @@
                         <p>Spicy chickpea curry paired with fluffy, deep-fried bread</p>
                     </div>
                 </article>
-                <article class="menu-item">
+                <article  class="menu-item">
                     <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/f1263395-5d4a-4775-95dc-80ab6f3bbd89_samosa.png" alt="Crispy samosa pastry">
                     <div class="menu-item-content">
                         <h3>Samosa Sensation</h3>
