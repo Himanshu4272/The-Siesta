@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Siesta - Hotels and Restaurants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        .hotel {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .book-now {
+            display: inline-block;
+            background-color: #134b61;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now:hover {
+            background-color: #1a5f7a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">THE SIESTA</div>
+        <nav>
+            <ul>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Restaurant</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="welcome">
+            <h1>Welcome to The Siesta</h1>
+            <p>Explore the best hotels and restaurants we have to offer. Your perfect stay starts here.</p>
+        </div>
+
+        <div class="featured-products">
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="Luxury Hotel">
+                <h3>Luxury Hotels</h3>
+                <p>Experience luxury and comfort in our premier hotel.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="Guest House">
+                <h3>Guest House & Dormitory</h3>
+                <p>Comfortable and affordable accommodations for all travelers.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="Cozy Inn">
+                <h3>Cozy Inn</h3>
+                <p>A warm and inviting place to relax and recharge.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="Beachfront Resort">
+                <h3>Beachfront Resort</h3>
+                <p>Enjoy stunning ocean views and direct beach access.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="Mountain Retreat">
+                <h3>Mountain Retreat</h3>
+                <p>Escape to nature with our secluded mountain accommodations.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="product hotel">
+                <img src="/placeholder.svg?height=200&width=300" alt="City Center Hotel">
+                <h3>City Center Hotel</h3>
+                <p>Stay in the heart of the action with easy access to attractions.</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
